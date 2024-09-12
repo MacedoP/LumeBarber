@@ -2,13 +2,14 @@
 import { Input } from "@/components/ui/input";
 import Header from "./_components/Header";
 import { Button } from "@/components/ui/button";
-import { EyeIcon, SearchIcon } from "lucide-react";
 import Image from "next/image";
 import { Card, CardContent } from "./_components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
+
+
 import { db } from "./_lib/prisma";
 import BarbershopItem from "./_components/barbershop-item";
+import BookingItem from "./_components/booking-item";
+import { SearchIcon } from "lucide-react";
 
 
 
@@ -63,35 +64,19 @@ const Home = async () => {
             </Button>
 
             <Button className="gap-2 text-white" variant="secondary">
-              <Image src="/scissor.svg" alt="Tesoura" width={16} height={16} />
-              Manicuri
-            </Button>
-
-            <Button className="gap-2 text-white" variant="secondary">
-              <Image src="/bigode.svg" alt="Tesoura" width={16} height={16} />
-              Barba
-            </Button>
-
-            <Button className="gap-2 text-white" variant="secondary">
-              <Image src="/Vector.svg" alt="Tesoura" width={16} height={16} />
-              Acabamento
-            </Button>
-
-            <Button className="gap-2 text-white" variant="secondary">
-              <Image src="/scissor.svg" alt="Tesoura" width={16} height={16} />
-              Cabelo
-            </Button>
-
-            <Button className="gap-2 text-white" variant="secondary">
-              <Image src="/bigode.svg" alt="Tesoura" width={16} height={16} />
-              Barba
-            </Button>
-
-            <Button className="gap-2 text-white" variant="secondary">
-             <EyeIcon size={16}/>
+              <Image src="/eyesbro.svg" alt="Tesoura" width={16} height={16} />
               Sobracenlhas
             </Button>
 
+            <Button className="gap-2 text-white" variant="secondary">
+              <Image src="/msm.svg" alt="Tesoura" width={16} height={16} />
+              Measagem
+            </Button>
+
+            <Button className="gap-2 text-white" variant="secondary">
+              <Image src="/hifratacao.svg" alt="Tesoura" width={16} height={16} />
+              Hidratacao
+            </Button>
           </div>
 
           {/*Banner abaixo*/}
@@ -101,38 +86,12 @@ const Home = async () => {
 
 
            {/*Agendamento*/}
-           <h2 className="uppercase text-gray-400 font-bold text-xs mt-6 mb-3">Agendamento</h2>
-           <Card className="mt-6">
-            <CardContent className="flex justify-between p-0">
-
-              <div className=" flex flex-col gap-2 py-5 pl-5">
-
-                <Badge className="w-fit">Confirmado</Badge>
-
-                <h3 className="font-semibold">Corte de Cabelo</h3>
-
-                <div className="flex items-center gap-2">
-                  <Avatar className="h-6 w-6">
-                   <AvatarImage src="https://utfs.io/f/c97a2dc9-cf62-468b-a851-bfd2bdde775f-16p.png"/>
-                  </Avatar>
-                  <p className="text-sm">
-                    Barbearia Lumi
-                  </p>
-                </div>
-              </div>
-
-                <div className="flex flex-col justify-center items-center border-l-2 border-solid px-5">
-                  <p className="text-sm">Dezembro</p>
-                  <p className="text-3xl">12</p>
-                  <p className="text-sm">20:00</p>
-                </div>
-            </CardContent>
-           </Card>
+          <BookingItem/>
 
            <h2 className="uppercase text-gray-400 font-bold text-xs mt-6 mb-3">
             Recomendados
 
-           </h2>
+          </h2>
 
 
            {/*BARBEARIA RECOMENDADAS*/}
