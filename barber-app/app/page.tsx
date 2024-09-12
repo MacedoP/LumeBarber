@@ -2,7 +2,7 @@
 import { Input } from "@/components/ui/input";
 import Header from "./_components/Header";
 import { Button } from "@/components/ui/button";
-import { SearchIcon } from "lucide-react";
+import { EyeIcon, SearchIcon } from "lucide-react";
 import Image from "next/image";
 import { Card, CardContent } from "./_components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -45,7 +45,8 @@ const Home = async () => {
           </div>
 
           {/*BUSCA RAPIDA OU FILTRADA*/}
-          <div className="gap-3 flex">
+          <div className="gap-3 flex mt-6 overflow-x-scroll scroll-mx-0 [&:: -webkit-scrollbar]:hidden">
+            
             <Button className="gap-2 text-white" variant="secondary">
               <Image src="/scissor.svg" alt="Tesoura" width={16} height={16} />
               Cabelo
@@ -59,6 +60,36 @@ const Home = async () => {
             <Button className="gap-2 text-white" variant="secondary">
               <Image src="/Vector.svg" alt="Tesoura" width={16} height={16} />
               Acabamento
+            </Button>
+
+            <Button className="gap-2 text-white" variant="secondary">
+              <Image src="/scissor.svg" alt="Tesoura" width={16} height={16} />
+              Manicuri
+            </Button>
+
+            <Button className="gap-2 text-white" variant="secondary">
+              <Image src="/bigode.svg" alt="Tesoura" width={16} height={16} />
+              Barba
+            </Button>
+
+            <Button className="gap-2 text-white" variant="secondary">
+              <Image src="/Vector.svg" alt="Tesoura" width={16} height={16} />
+              Acabamento
+            </Button>
+
+            <Button className="gap-2 text-white" variant="secondary">
+              <Image src="/scissor.svg" alt="Tesoura" width={16} height={16} />
+              Cabelo
+            </Button>
+
+            <Button className="gap-2 text-white" variant="secondary">
+              <Image src="/bigode.svg" alt="Tesoura" width={16} height={16} />
+              Barba
+            </Button>
+
+            <Button className="gap-2 text-white" variant="secondary">
+             <EyeIcon size={16}/>
+              Sobracenlhas
             </Button>
 
           </div>
