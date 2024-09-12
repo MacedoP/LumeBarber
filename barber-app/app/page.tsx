@@ -16,7 +16,12 @@ const Home = async () => {
   //Chamar o nosso banco de dados aqui
 
   const barbershops = await db.barbershop.findMany({})
-  console.log({barbershops});
+  // console.log({barbershops});
+  const barbeariaspopulares = await db.barbershop.findMany({
+    orderBy:{
+      name: "desc",
+    }
+  })
 
   return ( 
     <div>
@@ -37,6 +42,25 @@ const Home = async () => {
               <SearchIcon/>
             </Button>
           
+          </div>
+
+          {/*BUSCA RAPIDA OU FILTRADA*/}
+          <div className="gap-3 flex">
+            <Button className="gap-2 text-white" variant="secondary">
+              <Image src="/scissor.svg" alt="Tesoura" width={16} height={16} />
+              Cabelo
+            </Button>
+
+            <Button className="gap-2 text-white" variant="secondary">
+              <Image src="/bigode.svg" alt="Tesoura" width={16} height={16} />
+              Barba
+            </Button>
+
+            <Button className="gap-2 text-white" variant="secondary">
+              <Image src="/Vector.svg" alt="Tesoura" width={16} height={16} />
+              Acabamento
+            </Button>
+
           </div>
 
           {/*Banner abaixo*/}
@@ -79,15 +103,39 @@ const Home = async () => {
 
            </h2>
 
+
+           {/*BARBEARIA RECOMENDADAS*/}
            <div className="flex gap-4 overflow-auto [&:: -webkit-scrollbar]:hidden">
              {barbershops.map((barbershop) => (
                 <BarbershopItem  key={barbershop.id} barbershop={barbershop}/>
              ))}
            </div>
 
-        
+
+
+           {/*BARBERRIA POPULATIOS DO GUETO*/}
+           <h2 className="uppercase text-gray-400 font-bold text-xs mt-6 mb-3">
+            Populares
+
+           </h2>
+
+           <div className="flex gap-4 overflow-auto [&:: -webkit-scrollbar]:hidden">
+             {barbeariaspopulares.map((barbershop) => (
+                <BarbershopItem  key={barbershop.id} barbershop={barbershop}/>
+             ))}
+           </div>
+
+           
       </div>
 
+
+      <footer>
+        <Card className="p-[10px]">
+               <CardContent className="p-[10px] text-center text-sm">
+                    © 2024 Copyright Lumi Barber
+               </CardContent>
+             </Card>
+      </footer>
     </div>
    );
 }
