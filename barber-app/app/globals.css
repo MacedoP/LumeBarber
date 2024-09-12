@@ -63,6 +63,23 @@
     --radius: 0.5rem;
   }
 }
+.container_img{
+  overflow: hidden
+
+
+}
+.container_img .barber_img{
+  transition-property: scale;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+  transition: 2s;
+  border-radius: 16px;
+}
+.container_img:hover .barber_img{
+  cursor: pointer;
+  transform: scale(1.1);
+
+}
 
 @layer base {
   * {
