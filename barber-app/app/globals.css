@@ -80,6 +80,21 @@
   transform: scale(1.1);
 
 }
+.servei_img{
+  overflow: hidden;
+}
+.servei_img{
+  transition-property: scale;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+  transition: 2s;
+  border-radius: 16px;
+}
+.servei_img:hover .move{
+  cursor: pointer;
+  transform: scale(1.1);
+
+}
 
 @layer base {
   * {
