@@ -37,15 +37,16 @@ const BarbershopPage =  async ({params}:BarbershopPageProps) => {
         <div className="relative w-full h-[250px]">
             <Image src={barbershop?.imageUrl} fill className="object-cover w-full h-auto"/>
 
-    {/*ICON PARA VOLTAR E MENU MOBILE*/}
+        {/*ICON PARA VOLTAR E MENU MOBILE*/}
             <Button size="icon" variant="secondary" className="absolute top-4 left-4" asChild >
-                <Link href="/">
+                <Link href="/" rel="prev">
                     <ChevronLeftIcon>
                     
                     </ChevronLeftIcon>
                 </Link>
             </Button>
 
+         {/*ICON  MENU MOBILE*/}
             <Button size="icon" variant="secondary" className="absolute top-4 right-4" asChild>
                 <MenuIcon></MenuIcon>
             </Button>
