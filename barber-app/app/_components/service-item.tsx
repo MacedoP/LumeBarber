@@ -25,12 +25,18 @@ const ServiceItem = ({service}: ServiceItemProps) => {
                 <p className="text-sm text-gray-400">{service.description}</p>
 
             {/*DIV QUE CONTEM OS PREÇOS*/}
-                <div className="flex items-center justify-between w-full">
+                <div className="flex items-center justify-between ">
                     <p className="text-sm font-bold text-primary">
-                        {Intl.NumberFormat("pt-BR", {style: 'currency',currency: 'EUR'}).format(Number(service.price))}</p>
+                        {Intl.NumberFormat("pt-BR", {
+                            style: 'currency',
+                            currency: 'EUR'})
+                            .format(Number(service.price))}
+                    </p>
 
 
-                    <Button className="flex justify-self-end items-center " size="sm" variant="secondary">Reservar</Button>
+                    <Button size="sm" variant="secondary">
+                        Reservar
+                    </Button>
 
                 </div>
             </div>
