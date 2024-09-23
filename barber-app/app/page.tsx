@@ -3,9 +3,6 @@ import { Input } from "@/components/ui/input";
 import Header from "./_components/Header";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { Card, CardContent } from "./_components/ui/card";
-
-
 import { db } from "./_lib/prisma";
 import BarbershopItem from "./_components/barbershop-item";
 import BookingItem from "./_components/booking-item";
@@ -119,13 +116,7 @@ const Home = async () => {
       </div>
 
 
-      <footer>
-        <Card className="p-[10px]">
-               <CardContent className="p-[10px] text-center text-sm">
-                    © 2024 Copyright Lumi Barber
-               </CardContent>
-             </Card>
-      </footer>
+      
     </div>
    );
 }

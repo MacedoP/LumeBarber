@@ -1,7 +1,8 @@
+import PhoneItem from "@/app/_components/phone-item";
 import ServiceItem from "@/app/_components/service-item";
 import { db } from "@/app/_lib/prisma";
 import { Button } from "@/components/ui/button";
-import { ChevronLeftIcon, Icon, MapPinIcon, MenuIcon, StarIcon } from "lucide-react";
+import { ChevronLeftIcon, MapPinIcon, MenuIcon, StarIcon } from "lucide-react";
 import  Image  from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -30,12 +31,14 @@ const BarbershopPage =  async ({params}:BarbershopPageProps) => {
     }
     console.log(barbershop.services);
 
+   
+
     return (  
         <div>
         {/* <h1>{barbershop?.name}</h1> */}
         {/*IMAGEM DAS BARBEARIAS*/}
         <div className="relative w-full h-[250px]">
-            <Image src={barbershop?.imageUrl} fill className="object-cover w-full h-auto"/>
+            <Image src={barbershop?.imageUrl} fill className="object-cover w-full h-auto" alt={"fotos barber"}/>
 
         {/*ICON PARA VOLTAR E MENU MOBILE*/}
             <Button size="icon" variant="secondary" className="absolute top-4 left-4" asChild >
@@ -82,17 +85,26 @@ const BarbershopPage =  async ({params}:BarbershopPageProps) => {
 
 
         {/*SERVIÇOS*/}
-        <div className="p-5 space-y-3">
+        <div className="p-5 space-y-2">
             <h2 className="font-bold uppercase text-gray-400">Serviços</h2>
 
 
-           <div className="space-y-3">
+           <div className="space-y-3 border-b border-solid p-5">
                {barbershop.services.map((service) => (
                      <ServiceItem service={service} key={service.id}/>
                ))}
            </div>
 
         </div>
+
+        {/*CONTATOS BARBEARIA*/}
+        <div className="p-5 space-y-3">
+            {barbershop.phones.map((phone)=>(
+                <PhoneItem phone={phone} key={phone}/>
+              
+            ))}
+        </div>
+
         </div>
     );
 }
