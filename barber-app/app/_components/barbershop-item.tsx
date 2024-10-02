@@ -14,7 +14,7 @@ interface BarbershopItemProps {
 const BarbershopItem = ({ barbershop }: BarbershopItemProps) => {
     return ( 
         <Card className="min-w-[167px] rounded-2xl">
-            {/*Imagens das barbearias*/}
+            {/*Imagens das barbearias na home page*/}
             <CardContent className=" p-2">
                 <div className="relative h-[159px] w-full container_img">
                    <Image fill className="object-cover rounded-2xl barber_img" src={barbershop.imageUrl}  alt="Barber Imagens"/>
@@ -26,7 +26,7 @@ const BarbershopItem = ({ barbershop }: BarbershopItemProps) => {
 
                 </div>
 
-                {/*TEXTOS ABAIXO DAS NOSSAS IMAGENS*/}
+                {/*TEXTOS ABAIXO DAS NOSSAS IMAGENS PRESENTE NA HOME PAGE*/}
                 <div className="px-1 py-3">
                     <h3 className="font-semibold overflow-hidden text-nowrap text-ellipsis truncate">{barbershop.name}</h3>
                     <p className="text-sm text-gray-400 overflow-hidden text-ellipsis truncate">{barbershop.address}</p>

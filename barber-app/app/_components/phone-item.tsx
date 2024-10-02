@@ -15,6 +15,7 @@ const PhoneItem = ({phone}: PhoneItemProps) => {
         navigator.clipboard.writeText(phone);
         toast.success("Telefone copiado com sucesso");
     }
+    
     return ( 
         <div className="flex justify-between" key={phone}>
 

@@ -7,7 +7,9 @@ import { Badge } from "@/components/ui/badge";
 const BookingItem = () => {
     return ( 
         <div>
+          {/*O CONTEUDO DESTE COMPONENT ESTA NA HOME PAGE ONDE SE ENCONTRA AS DEZEMBRO 12 20:00*/}
             <h2 className="uppercase text-gray-400 font-bold text-xs mt-6 mb-3">Agendamento</h2>
+
            <Card className="mt-6">
             <CardContent className="flex justify-between p-0">
 
@@ -19,6 +21,8 @@ const BookingItem = () => {
 
                 <div className="flex items-center gap-2">
                   <Avatar className="h-6 w-6">
+
+                    {/* A IMAGEM ARENDONDA ABAIXO DO BOTAO CONFIRMAR MA HOME PAGE */}
                    <AvatarImage src="https://utfs.io/f/c97a2dc9-cf62-468b-a851-bfd2bdde775f-16p.png"/>
                   </Avatar>
                   <p className="text-sm">
@@ -27,6 +31,7 @@ const BookingItem = () => {
                 </div>
               </div>
 
+                 {/* DIV QUE CONTEM AS DATA QUE NO CASO SAO DEZEMBRO 12 20: HORAS */}
                 <div className="flex flex-col justify-center items-center border-l-2 border-solid px-5">
                   <p className="text-sm">Dezembro</p>
                   <p className="text-3xl">12</p>
