@@ -95,6 +95,19 @@
   transform: scale(1.1);
 
 }
+/*CONFIGURACAO DA LOGO LUMI BARBER*/
+.logo_container{
+  background-image: linear-gradient(to left, blue, purple, red);
+  -webkit-background-clip: text;
+}
+.logo{
+  font-size: 25px;
+  font-weight: 900;
+  font-size: arial;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+
+}
 
 @layer base {
   * {
