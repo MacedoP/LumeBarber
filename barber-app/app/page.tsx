@@ -78,7 +78,7 @@ const Home = async () => {
 
           {/*BANNER DA IMAGEM PEQUENA COM OS CARAS SE CORTANDO O CABELO*/}
           <div className="relative w-full h-[150px] mt-6">
-            <Image src="/Banner.png" fill  className="object-cover rounded-xl"/>
+            <Image src="/banner04.jpg" fill  className="object-cover rounded-xl"/>
           </div>
 
 

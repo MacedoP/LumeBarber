@@ -5,7 +5,7 @@ const Footer = () => {
         <footer>
         <Card className="p-[10px]">
                <CardContent className="p-[10px] text-center text-sm">
-                    © 2024 Copyright Lumi Barber
+                    © 2024 Copyright Macedo Lumi Barber
                </CardContent>
              </Card>
       </footer>
