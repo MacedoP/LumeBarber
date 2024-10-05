@@ -42,7 +42,7 @@ const Home = async () => {
           
           </div>
 
-          {/*BUSCA RAPIDA OU FILTRADA CONTEM OS ICON DA TESOURA LAMINA E BARBA*/}
+          {/*BUSCA RAPIDA OU FILTRADA CONTEM OS ICON DA TESOURA LAMINA E BARBA ABAIXO DO INPUT DE PESQUISA NA HOME PAGE*/}
           <div className="gap-3 flex mt-6 overflow-x-scroll scroll-mx-0 [&:: -webkit-scrollbar]:hidden">
             
             <Button className="gap-2 text-white" variant="secondary">
@@ -76,7 +76,7 @@ const Home = async () => {
             </Button>
           </div>
 
-          {/*BANNER DA IMAGEM PEQUENA COM OS CARAS SE CORTANDO O CABELO*/}
+          {/*BANNER DA IMAGEM PEQUENA COM OS CARAS SE CORTANDO O CABELO COM AS DUAS MAQUIMA E O BLOGO*/}
           <div className="relative w-full h-[150px] mt-6">
             <Image src="/banner04.jpg" fill  className="object-cover rounded-xl"/>
           </div>
